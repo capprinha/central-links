@@ -23,4 +23,4 @@ function observa(){
 }
 
 gulp.task('sass', observa)
-gulp.task('build',gulp.series(compilaSass, htmlMin,observa))
+gulp.task('build',gulp.series(compilaSass, htmlMin))
