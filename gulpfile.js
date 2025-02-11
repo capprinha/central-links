@@ -16,11 +16,11 @@ function htmlMin (){
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build/'));
 }
-function pegaImg(){
-    return gulp.src('src/anderson.jpg')
-    .pipe(gulp.src('src/fundo.png'))
-    .pipe(gulp.dest('build/'))
-}
+// function pegaImg(){
+//     return gulp.src('src/anderson.jpg')
+//     .pipe(gulp.src('src/fundo.png'))
+//     .pipe(gulp.dest('build/'))
+// }
 
 function observa(){
     gulp.watch('src/main.scss', compilaSass);
@@ -28,4 +28,4 @@ function observa(){
 }
 
 gulp.task('sass', observa)
-gulp.task('build',gulp.series(compilaSass, htmlMin, pegaImg))
+gulp.task('build',gulp.series(compilaSass, htmlMin))
